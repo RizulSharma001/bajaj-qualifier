@@ -63,6 +63,17 @@ const calculateHCF = (arr) => {
 
 // --- ROUTES ---
 
+// Root Endpoint
+app.get('/', (req, res) => {
+    res.json({
+        message: "Welcome to the Bajaj Health Qualifier API",
+        endpoints: {
+            health: "GET /health",
+            logic: "POST /bfhl"
+        }
+    });
+});
+
 // GET /health
 app.get('/health', (req, res) => {
     res.json({
